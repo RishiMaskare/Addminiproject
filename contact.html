@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Get in Touch ✨</h1>
+</header>
+
+<section class="contact-section">
+    <div class="contact-card">
+
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:jiyabatra0007@gmail.com">jiyabatra0007@gmail.com</a></p>
+        <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/JiyaBatra" target="_blank">JiyaBatra</a></p>
+        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/jiya-batra-12b02b289" target="_blank">Jiya Batra</a></p>
+        <p><i class="fab fa-discord"></i> Discord: <a href="https://discord.gg/PzvvW59g" target="_blank">Contribution help</a></p>
+
+    </div>
+</section>
+
+<!-- Butterfly Cursor + Sparkles -->
+<div class="cursor">
+</div>
+<div class="sparkle-container"></div>
+
+<script src="script.js"></script>
+<style>
+    /* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+/* Contact Card */
+.contact-card {
+    max-width: 600px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 50px 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+/* Paragraphs */
+.contact-card p {
+    font-size: 1.15rem;
+    margin: 25px 0;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+/* Links Styling */
+.contact-card a {
+    color: #7b6cf6;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.contact-card a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #ff69b4;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #ff69b4;
+}
+
+.contact-card a:hover::after {
+    width: 100%;
+}
+
+/* Icons Styling */
+.contact-card i {
+    margin-right: 12px;
+    font-size: 1.4rem;
+    color: #7b6cf6;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-card i:hover {
+    transform: rotate(-10deg) scale(1.2);
+    color: #ff69b4;
+    text-shadow: 0 0 10px #ffb6c1, 0 0 20px #ff69b4;
+}
+
+</style>
+</body>
+</html>

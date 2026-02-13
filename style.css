@@ -1,0 +1,397 @@
+/* Google Font (Traditional + Elegant) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fdf6f0, #f8e8ee, #e4f0f6);
+    min-height: 100vh;
+    overflow-x: hidden;
+    cursor: none; /* Hide default cursor */
+    color: #5c5470;
+}
+
+/* 🦋 Custom Butterfly Cursor */
+.body {
+    cursor: none;
+}
+
+/* Butterfly Cursor */
+.cursor {
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    background: url("../AddMiniProject/Assest/butterflygif.mp4") no-repeat center;
+    background-size: contain;
+    mix-blend-mode: screen;/* removes white background effect */
+    transition: transform 0.05s linear;
+}
+
+/* Sparkles */
+.sparkle {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, #fd2264, #fc3aa1, #ff6fc8);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkleFade 0.8s linear forwards;
+    z-index: 9998;
+}
+
+@keyframes sparkleFade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+
+/* Flapping animation */
+@keyframes flap {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(10deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Header */
+header {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid #f3d1dc;
+    animation: fadeDown 1s ease forwards;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #a267ac;
+}
+
+/* Navbar */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    color: #6a4e77;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Underline animation */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #ff9eb5;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #ff9eb5;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeUp 1.5s ease forwards;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+    color: #7a5c8e;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Projects Section */
+.projects {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 20px;
+    margin: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.4s ease;
+}
+
+.projects:hover {
+    transform: translateY(-8px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f3d1dc;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* General */
+
+
+/* Section Layout */
+.contribute-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    animation: fadeUp 1.5s ease;
+}
+
+/* Card */
+.contribute-card {
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease;
+}
+
+.contribute-card:hover {
+    transform: scale(1.02);
+}
+
+.contribute-card h2 {
+    margin-top: 25px;
+    color: #7b6cf6;
+}
+
+/* Code Styling */
+pre {
+    background: #f3e8ff;
+    padding: 15px;
+    border-radius: 15px;
+    overflow-x: auto;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+code {
+    font-family: monospace;
+    color: #5a189a;
+    font-size: 0.95rem;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+/* Contact Card */
+.contact-card {
+    max-width: 600px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 50px 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+/* Paragraphs */
+.contact-card p {
+    font-size: 1.15rem;
+    margin: 25px 0;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+/* Links Styling */
+.contact-card a {
+    color: #7b6cf6;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.contact-card a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #ff69b4;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #ff69b4;
+}
+
+.contact-card a:hover::after {
+    width: 100%;
+}
+
+/* Icons Styling */
+.contact-card i {
+    margin-right: 12px;
+    font-size: 1.4rem;
+    color: #7b6cf6;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-card i:hover {
+    transform: rotate(-10deg) scale(1.2);
+    color: #ff69b4;
+    text-shadow: 0 0 10px #ffb6c1, 0 0 20px #ff69b4;
+}
+.mini-projects {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.mini-projects h2 {
+    color: #d147a3;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    padding: 25px 30px;
+    width: 220px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+.project-card h3 {
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #5e548e;
+}
+
+.project-card .project-link {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 12px;
+    background: #ffb6c1;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.project-card .project-link:hover {
+    background: #ff69b4;
+    transform: translateY(-2px);
+}
+/* Card Paragraph Styling */
+section p.card {
+    background: rgba(255, 255, 255, 0.6);   /* Glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    
+}
