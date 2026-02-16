@@ -1,0 +1,110 @@
+/* Google Font (optional but cute 💖) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe6f2, #fce4ff, #e6f0ff);
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Main Heading */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #ff69b4, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+body > p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* Section Styling */
+.mini-projects {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Section Heading */
+.mini-projects h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ff4da6;
+}
+
+/* IMPORTANT:
+   We are NOT styling .projects-container or .project-card
+   because you said they are already styled elsewhere.
+*/
+
+/* Style ONLY the second project link (external link block) */
+.mini-projects .projects-container:nth-of-type(2) {
+    margin-top: 30px;
+}
+
+/* Style anchor link if not already styled */
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    background: linear-gradient(90deg, #ff69b4, #a855f7);
+    color: white;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.project-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+}
+
+
+.github-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 18px;
+    text-decoration: none;
+    background: #24292e;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.github-link:hover {
+    background: #444;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .mini-projects h2 {
+        font-size: 1.5rem;
+    }
+
+    body > p {
+        font-size: 1rem;
+    }
+}
