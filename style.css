@@ -343,6 +343,9 @@ code {
     font-size: 2rem;
 }
 
+.mini-projects{
+    display: flex;
+}
 .projects-container {
     display: flex;
     justify-content: center;
@@ -399,4 +402,32 @@ section p.card {
     margin: 20px auto;
     max-width: 800px;
     
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 18px;
+    text-decoration: none;
+    background: #24292e;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.github-link:hover {
+    background: #444;
+}
+
+/* Make Mini Project cards side by side */
+.mini-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.mini-projects .project-card {
+    width: 220px;
 }
