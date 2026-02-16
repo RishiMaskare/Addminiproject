@@ -271,6 +271,11 @@ code {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.ch1 {
+    text-align: center;
+    align-items: center;
+}
+
 .contact-card:hover {
     transform: scale(1.03);
     box-shadow: 0 20px 50px rgba(0,0,0,0.12);
