@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Dev Identity Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="page-header">
+      <div>
+        <h1 id="title">Dev Identity Studio</h1>
+        <p class="subtitle">Build, style, and download a premium developer identity card.</p>
+      </div>
+      <button id="themeToggle" type="button" class="secondary-btn" aria-label="Toggle dark and light mode">
+        Switch to Dark
+      </button>
+    </div>
+  </header>
+
+  <main class="wrapper">
+
+    <section class="app">
+      <form id="identityForm" class="panel form-panel" novalidate autocomplete="off">
+        <h2>Profile Inputs</h2>
+
+        <label for="nameInput">Name</label>
+        <input id="nameInput" name="name" type="text" placeholder="e.g. Aditya" autocomplete="name" maxlength="40">
+
+        <label for="roleInput">Role</label>
+        <input id="roleInput" name="role" type="text" placeholder="e.g. Frontend Developer" maxlength="60">
+
+        <label for="skillsInput">Skills</label>
+        <input id="skillsInput" name="skills" type="text" placeholder="e.g. JavaScript, React, UI Design" maxlength="120">
+
+        <label for="githubInput">GitHub Username or URL</label>
+        <input id="githubInput" name="github" type="text" placeholder="e.g. octocat or https://github.com/octocat">
+
+        <label for="linkedinInput">LinkedIn Username or URL</label>
+        <input id="linkedinInput" name="linkedin" type="text" placeholder="e.g. aditya-kumar or https://linkedin.com/in/aditya-kumar">
+
+        <label for="imageUpload">Custom Profile Image</label>
+        <input id="imageUpload" name="avatar" type="file" accept="image/*">
+        <p class="hint">Custom upload has priority over GitHub avatar.</p>
+
+        <div class="actions">
+          <button id="generateBtn" type="submit" class="primary-btn">Generate Identity</button>
+          <button id="fetchGithubBtn" type="button" class="secondary-btn">Fetch GitHub Avatar</button>
+          <button id="clearImageBtn" type="button" class="ghost-btn">Clear Uploaded Image</button>
+        </div>
+      </form>
+
+      <section class="panel preview-panel" aria-label="Generated developer card preview">
+        <div class="card-shell">
+          <article class="card" id="card">
+            <div class="card-orb card-orb-a" aria-hidden="true"></div>
+            <div class="card-orb card-orb-b" aria-hidden="true"></div>
+
+            <div class="card-head">
+              <div class="avatar" id="avatar" aria-label="Profile avatar">D</div>
+              <div class="identity-block">
+                <p class="identity-label">Developer Identity</p>
+                <h2 id="cardName">Developer</h2>
+                <p id="cardRole">Software Developer</p>
+              </div>
+            </div>
+
+            <section class="skills-block">
+              <p class="section-label">Skills</p>
+              <div id="cardSkills" class="skills-list">
+                <span class="skill-chip">Skills</span>
+              </div>
+            </section>
+
+            <div class="social-links">
+              <a id="cardGithub" href="#" target="_blank" rel="noopener noreferrer">GitHub | username</a>
+              <a id="cardLinkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn | username</a>
+            </div>
+
+            <div class="card-footer">
+              <span id="cardBadge" class="card-badge">Developer Identity</span>
+              <span id="cardStamp" class="card-stamp"></span>
+            </div>
+          </article>
+        </div>
+
+        <div class="actions">
+          <button id="copyBtn" type="button" class="secondary-btn">Copy Info</button>
+          <button id="randomizeBtn" type="button" class="ghost-btn">Randomize Style</button>
+          <button id="downloadBtn" type="button" class="primary-btn">Download Card</button>
+        </div>
+        <p class="hint download-hint">Tip: if GitHub avatar blocks capture, upload a custom image for guaranteed download.</p>
+        <p id="statusMessage" class="status" role="status" aria-live="polite"></p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-footer">
+      <p>Made with 💕 by Open Source Community</p> <br>
+      <p>&copy; <span id="footerYear"></span> Dev Identity Studio</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
