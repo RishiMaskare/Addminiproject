@@ -9,29 +9,36 @@
 </head>
 
 <body>
+
   <header class="home-header">
     <div class="home-header-inner">
-      <a class="home-brand" href="index.html" aria-label="Open Source Mini Projects home page">
-        <span class="home-brand-icon" aria-hidden="true">🌸</span>
+      <a class="home-brand" href="index.html">
+        <span class="home-brand-icon">🌸</span>
         <span class="home-brand-copy">
           <span class="home-brand-title">Open Source Mini Projects</span>
           <span class="home-brand-tagline">Build. Share. Grow. Together.</span>
         </span>
       </a>
 
-      <button class="home-nav-toggle" type="button" aria-controls="home-nav" aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="home-nav-toggle" type="button">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <nav id="home-nav" class="home-nav" aria-label="Primary navigation">
+      <nav id="home-nav" class="home-nav">
         <a class="active" href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="contribute.html">How to Contribute</a>
         <a href="contact.html">Contact</a>
         <a href="projects.html">Projects</a>
+
+        <!-- USER + LOGOUT ADDED -->
+        <div class="nav-profile">
+          <span id="navUsername" class="nav-user"></span>
+          <button class="logout-btn" onclick="logout()">logout
+          </button>
+        </div>
       </nav>
     </div>
   </header>
@@ -39,82 +46,81 @@
   <section class="hero">
     <h2>Build. Share. Grow.</h2>
     <p>
-      Anyone can contribute by adding mini projects inside the projects folder
-      💖
+      Anyone can contribute by adding mini projects inside the projects folder 💖
     </p>
   </section>
 
   <section class="projects">
     <h2>Community Projects</h2>
     <p>Explore projects inside the <strong>projects</strong> folder.</p>
+
     <h2>Mini Project Example 🩷</h2>
+
     <section class="mini-projects">
       <div class="projects-container">
+
         <div class="project-card">
           <h3>Cute Calculator</h3>
           <p>A pastel pink calculator mini-project example 💖</p>
           <a href="projectforcontributor/MiniCalculator/calculator.html" class="project-link">Open Project</a>
         </div>
+
+        <div class="project-card">
+          <h3>Future Letters</h3>
+          <p>Write a letter to your future self 💌</p>
+          <a href="https://letter-to-my-future-self.vercel.app/" class="project-link" target="_blank">Open Project</a>
+          <a href="https://github.com/RishiMaskare/letter-to-my-future-self" class="github-link" target="_blank">
+            View GitHub Repo
+          </a>
+        </div>
+
+        <div class="project-card">
+          <h3>Pastel To-Do App</h3>
+          <p>A cute task manager with local storage 🌸</p>
+          <a href="projectforcontributor/TodoApp/todo.html" class="project-link">Open Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Password Generator</h3>
+          <p>Create strong random passwords instantly 🔐</p>
+          <a href="projectforcontributor/PasswordGenerator/password.html" class="project-link">Open Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Number Guessing Game</h3>
+          <p>Guess the hidden number between 1–100 🎯</p>
+          <a href="projectforcontributor/NumberGuessGame/guess.html" class="project-link">Open Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Dev Identity Studio</h3>
+          <p>Build, style, and download a premium developer identity card.</p>
+          <a href="projectforcontributor/dev-identity-studio/index.html" class="project-link">Open Project</a>
+        </div>
+
       </div>
-      <div class="project-card">
-        <h3>Future Letters</h3>
-        <p>Write a letter to your future self 💌</p>
-        <a href="https://letter-to-my-future-self.vercel.app/" class="project-link" target="_blank">
-          Open Project
-        </a>
-        <a href="https://github.com/RishiMaskare/letter-to-my-future-self" class="github-link" target="_blank">
-          View GitHub Repo
-        </a>
-      </div>
-
-      <div class="project-card">
-        <h3>Pastel To-Do App</h3>
-        <p>A cute task manager with local storage 🌸</p>
-
-        <a href="projectforcontributor/TodoApp/todo.html" class="project-link">
-          Open Project
-        </a>
-      </div>
-
-      <div class="project-card">
-        <h3>Password Generator</h3>
-        <p>Create strong random passwords instantly 🔐</p>
-
-        <a href="projectforcontributor/PasswordGenerator/password.html" class="project-link">
-          Open Project
-        </a>
-      </div>
-
-      <div class="project-card">
-        <h3>Number Guessing Game</h3>
-        <p>Guess the hidden number between 1–100 🎯</p>
-
-        <a href="projectforcontributor/NumberGuessGame/guess.html" class="project-link">
-          Open Project
-        </a>
-      </div>
-
-      <div class="project-card">
-        <h3>Dev Identity Studio</h3>
-        <p>Build, style, and download a premium developer identity card.</p>
-
-        <a href="projectforcontributor/dev-identity-studio/index.html" class="project-link">
-          Open Project
-        </a>
-      </div>
-
     </section>
   </section>
 
   <footer>
     <p>Made with 💕 by Open Source Community</p>
   </footer>
+
   <div class="cursor">
     <img src="Assest/butterfly.mp4" alt="Butterfly Cursor" />
   </div>
+
   <div class="sparkle-container"></div>
 
+  <!--  AUTH SYSTEM -->
+  <script src="auth.js"></script>
+  <script>
+    checkAuth();        // protect page
+    showLoggedInUser(); // show username
+  </script>
+
   <script src="script.js"></script>
+
 </body>
 
 </html>
