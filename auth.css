@@ -1,0 +1,141 @@
+/* ================= GLOBAL ================= */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:"Poppins",sans-serif;
+}
+
+/* ================= BACKGROUND ================= */
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  /* SAME pastel gradient as main website */
+  background: linear-gradient(
+    135deg,
+    #fdf6f0,
+    #f8e8ee,
+    #e4f0f6
+  );
+
+  color:#5c5470;
+}
+
+/* ================= AUTH CARD ================= */
+.auth-container{
+  width:400px;
+  padding:45px;
+  border-radius:26px;
+
+  /* pastel glass effect */
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(15px);
+
+  border:1px solid rgba(255,255,255,0.85);
+
+  box-shadow:
+    0 16px 45px rgba(113,79,127,0.18);
+
+  text-align:center;
+}
+
+/* ================= TITLE ================= */
+h2{
+  font-family:'Playfair Display', serif;
+  color:#6d4e86;
+  margin-bottom:28px;
+  font-weight:600;
+  letter-spacing:0.5px;
+}
+
+/* ================= INPUT GROUP ================= */
+.input-group{
+  position:relative;
+  margin-bottom:18px;
+}
+
+input{
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.9);
+  outline:none;
+
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+
+  color:#6a4e77;
+  font-size:15px;
+  transition:0.25s ease;
+}
+
+input::placeholder{
+  color:#b08fbf;
+}
+
+/* input focus pastel glow */
+input:focus{
+  border-color:#ff9eb5;
+  box-shadow:0 0 0 3px rgba(255,158,181,0.25);
+}
+
+/* ================= PASSWORD TOGGLE ================= */
+.toggle-password{
+  position:absolute;
+  right:14px;
+  top:50%;
+  transform:translateY(-50%);
+  cursor:pointer;
+  font-size:16px;
+  color:#8a6aa3;
+}
+
+/* ================= BUTTON ================= */
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:999px;
+  margin-top:12px;
+
+  /* pastel gradient button (same family as navbar active) */
+  background:linear-gradient(135deg,#ff86ba,#b17ff6);
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+
+  transition: all 0.3s ease;
+}
+
+button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(191,115,185,0.35);
+}
+
+/* ================= LINKS ================= */
+p{
+  margin-top:20px;
+  color:#7a5c8e;
+}
+
+a{
+  color:#ff86ba;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.25s;
+}
+
+a:hover{
+  color:#b23e86;
+}
+
+/* ================= ERROR ================= */
+.error{
+  color:#ff6fa3;
+  font-size:14px;
+  margin-top:8px;
+}

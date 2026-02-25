@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="auth.css">
+</head>
+
+<body class="auth-page">
+
+<div class="auth-container">
+<form id="signupForm">
+
+<h2>Create Account</h2>
+
+<div class="input-group">
+  <input type="text" id="username" placeholder="Username" required>
+</div>
+
+<div class="input-group">
+  <input type="email" id="email" placeholder="Email" required>
+</div>
+
+<div class="input-group">
+  <input type="password" id="password" placeholder="Password" required>
+  <span class="toggle-password" onclick="togglePassword('password', this)">👁</span>
+</div>
+
+<div class="input-group">
+  <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+  <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">👁</span>
+</div>
+
+<div class="error" id="signupError"></div>
+
+<button type="submit">Sign Up</button>
+
+<p>Already have account? <a href="signin.html">Sign In</a></p>
+
+</form>
+</div>
+
+<script src="auth.js"></script>
+
+<!-- ✅ Redirect if already logged in -->
+<script>
+  if (localStorage.getItem("loggedIn")) {
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>
