@@ -1,140 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Add Mini Project</title>
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="contact.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Add Mini Project</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="contact-page">
-<header class="home-header">
-    <div class="home-header-inner">
-        <a class="home-brand" href="index.html">
-            <span class="home-brand-icon">&#127800;</span>
-            <span class="home-brand-copy">
-                <span class="home-brand-title">Open Source Mini Projects</span>
-                <span class="home-brand-tagline">Build. Share. Grow. Together.</span>
-            </span>
-        </a>
+    <header class="home-header">
+        <div class="home-header-inner">
+            <a class="home-brand" href="index.html">
+                <span class="home-brand-icon">&#127800;</span>
+                <span class="home-brand-copy">
+                    <span class="home-brand-title">Open Source Mini Projects</span>
+                    <span class="home-brand-tagline">Build. Share. Grow. Together.</span>
+                </span>
+            </a>
 
-        <button class="home-nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu" aria-controls="home-nav">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            <button class="home-nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu"
+                aria-controls="home-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        <nav id="home-nav" class="home-nav" aria-label="Main Navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contribute.html">How to Contribute</a>
-            <a href="mini-project-guidelines/index.html">Guidelines</a>
-            <a class="active" href="contact.html">Contact</a>
-            <a href="projects.html">Projects</a>
-            <div class="nav-profile">
-                <span id="navUsername" class="nav-user"></span>
-                <button class="logout-btn" onclick="logout()">Logout</button>
-            </div>
-        </nav>
-    </div>
-</header>
+            <nav id="home-nav" class="home-nav" aria-label="Main Navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contribute.html">How to Contribute</a>
+                <a href="mini-project-guidelines/index.html">Guidelines</a>
+                <a class="active" href="contact.html">Contact</a>
+                <a href="projects.html">Projects</a>
+                <div class="nav-profile">
+                    <span id="navUsername" class="nav-user"></span>
+                    <button class="logout-btn" onclick="logout()">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-<section class="contact-wrapper">
+    <main class="contact-main">
+        <section class="contact-hero">
+            <p class="contact-eyebrow" data-motion="fade" data-motion-on="load">Let Us Connect</p>
+            <h1 data-motion="stagger" data-stagger="letters" data-motion-on="load">Get in Touch &#10024;</h1>
+            <p data-motion="slide" data-motion-on="load" data-motion-delay="180ms">
+                Have an idea, feedback, or contribution question? Reach out and we will help you get started quickly.
+            </p>
+        </section>
 
-<!-- CONTACT INFO -->
-<div class="contact-card">
+        <section class="contact-layout" data-motion="slide" data-motion-on="scroll">
+            <article class="contact-info-card">
+                <h2 data-motion="fade" data-motion-on="scroll">Contact Channels</h2>
 
-<div class="contact-item">
-<i class="fas fa-envelope"></i>
-<div>
-<span>Email</span>
-<a href="mailto:jiyabatra0007@gmail.com">jiyabatra0007@gmail.com</a>
-</div>
-</div>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span class="contact-item-label">Email</span>
+                            <a href="mailto:jiyabatra0007@gmail.com">jiyabatra0007@gmail.com</a>
+                        </div>
+                    </div>
 
-<div class="contact-item">
-<i class="fab fa-github"></i>
-<div>
-<span>GitHub</span>
-<a href="https://github.com/JiyaBatra" target="_blank">JiyaBatra</a>
-</div>
-</div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <span class="contact-item-label">GitHub</span>
+                            <a href="https://github.com/JiyaBatra" target="_blank"
+                                rel="noopener noreferrer">JiyaBatra</a>
+                        </div>
+                    </div>
 
-<div class="contact-item">
-<i class="fab fa-linkedin"></i>
-<div>
-<span>LinkedIn</span>
-<a href="https://www.linkedin.com/in/jiya-batra-12b02b289" target="_blank">Jiya Batra</a>
-</div>
-</div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <span class="contact-item-label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/jiya-batra-12b02b289" target="_blank"
+                                rel="noopener noreferrer">Jiya Batra</a>
+                        </div>
+                    </div>
 
-<div class="contact-item">
-<i class="fab fa-discord"></i>
-<div>
-<span>Community</span>
-<a href="https://discord.gg/PzvvW59g" target="_blank">Contribution Help</a>
-</div>
-</div>
+                    <div class="contact-item">
+                        <i class="fab fa-discord"></i>
+                        <div>
+                            <span class="contact-item-label">Community</span>
+                            <a href="https://discord.gg/PzvvW59g" target="_blank" rel="noopener noreferrer">Contribution
+                                Help</a>
+                        </div>
+                    </div>
+                </div>
 
-<p class="footer-note">💫 Always open to collaboration & creative ideas</p>
+                <p class="contact-note">Always open to collaboration and creative ideas.</p>
+            </article>
 
-</div>
+            <article class="contact-form-card">
+                <h2 data-motion="stagger" data-stagger="words" data-motion-on="scroll">Send a Message</h2>
 
-<!-- MESSAGE FORM -->
-<div class="message-card">
+                <form class="contact-form" method="post" id="contactForm">
+                    <div class="input-group">
+                        <input name="name" type="text" autocomplete="name" required>
+                        <label>Your Name</label>
+                    </div>
 
-<h2>Send a Message</h2>
+                    <div class="input-group">
+                        <input name="email" type="email" autocomplete="email" required>
+                        <label>Your Email</label>
+                    </div>
 
-<form method="post" id="contactForm">
+                    <div class="input-group">
+                        <input name="subject" type="text" autocomplete="off" required>
+                        <label>Subject</label>
+                    </div>
 
-<div class="input-group">
-<input name="name" type="text" required>
-<label>Your Name</label>
-</div>
+                    <div class="input-group">
+                        <textarea name="message" rows="5" required></textarea>
+                        <label>Your Message</label>
+                    </div>
 
-<div class="input-group">
-<input name="email" type="email" required>
-<label>Your Email</label>
-</div>
+                    <button type="submit" class="send-btn">Send Message &#10024;</button>
+                </form>
+            </article>
+        </section>
+    </main>
 
-<div class="input-group">
-<input name="subject" type="text" required>
-<label>Subject</label>
-</div>
-
-<div class="input-group">
-<textarea rows="5" required></textarea>
-<label>Your Message</label>
-</div>
-
-<button class="send-btn">Send Message ✨</button>
-
-</form>
-
-</div>
-
-</section>
-
-</main>
-
-<footer class="site-footer">
-    <div class="site-footer-inner">
-        <p class="site-footer-title">Open Source Mini Projects</p>
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <p class="site-footer-title">Open Source Mini Projects</p>
             <p class="site-footer-note">Where ideas become mini projects and contributions become growth.</p>
             <div class="site-footer-highlights" aria-label="Community highlights">
                 <span>Open Source</span>
                 <span>Beginner Friendly</span>
                 <span>Community Driven</span>
             </div>
-            <p class="site-footer-meta">&#169; <span class="footer-year">2026</span> Open Source Mini Projects &#128150;</p>
+            <p class="site-footer-meta">&#169; <span class="footer-year">2026</span> Open Source Mini Projects &#128150;
+            </p>
+        </div>
+    </footer>
+
+    <div class="cursor">
+        <video src="Assest/butterfly.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
     </div>
-</footer>
+    <div class="sparkle-container"></div>
 
-<script src="form-config.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        checkAuth();
+        showLoggedInUser();
+    </script>
+    <script src="script.js"></script>
+    <script src="form-config.js"></script>
 </body>
-</html>
 
+</html>
