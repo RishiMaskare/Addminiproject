@@ -18,10 +18,7 @@ body {
     color: #5c5470;
 }
 
-/* 🦋 Custom Butterfly Cursor */
-.body {
-    cursor: none;
-}
+
 
 /* Butterfly Cursor */
 .cursor {
@@ -549,16 +546,13 @@ code {
 .mini-projects {
     text-align: center;
     padding: 60px 20px;
+    display: flex;
 }
 
 .mini-projects h2 {
     color: #d147a3;
     margin-bottom: 30px;
     font-size: 2rem;
-}
-
-.mini-projects{
-    display: flex;
 }
 .projects-container {
     display: flex;
