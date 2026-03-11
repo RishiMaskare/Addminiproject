@@ -1,4 +1,4 @@
-const FORMSPREE_URL = "<FORMSPREE_URL>";
+const FORMSPREE_URL = "https://formspree.io/f/xzdjrbro";
 
 const form = document.getElementById("contactForm");
 
