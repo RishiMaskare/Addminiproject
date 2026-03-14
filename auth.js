@@ -269,7 +269,22 @@ if (signupForm) {
       return;
     }
 
-    window.location.href = getMainPagePath("signin.html");
+    // if username already exists
+    const userExists = users.some(user => user.email === email);
+
+    if (userExists) {
+      error.textContent = "User already exists!";
+      return;
+    }
+
+    // new user
+    const newUser = { username, email, password };
+    users.push(newUser);
+    localStorage.setItem("users", JSON.stringify(users));
+
+    localStorage.setItem("loggedIn", "true");
+    localStorage.setItem("loggedInUser", username);
+    window.location.href = getMainPagePath("index.html");
   });
 }
 
