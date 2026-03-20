@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="home-header">
+        <div class="home-header-inner">
+            <a class="home-brand" href="index.html">
+                <span class="home-brand-icon">&#127800;</span>
+                <span class="home-brand-copy">
+                    <span class="home-brand-title">Open Source Mini Projects</span>
+                    <span class="home-brand-tagline">Build. Share. Grow. Together.</span>
+                </span>
+            </a>
+
+            <button class="home-nav-toggle" type="button" aria-expanded="false" aria-controls="home-nav" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="home-nav" class="home-nav" aria-label="Main Navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a class="active" href="contribute.html">How to Contribute</a>
+                <a href="mini-project-guidelines/index.html">Guidelines</a>
+                <a href="contact.html">Contact</a>
+                <a href="projects.html">Projects</a>
+                <div class="nav-profile">
+                    <span id="navUsername" class="nav-user"></span>
+                    <button class="logout-btn" onclick="logout()">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+</body>
+</html>
